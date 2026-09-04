@@ -1,0 +1,14 @@
+Built-in ImageGen edit of Concepts/02-snap-frame-color.png; selected orange direction.
+
+Initial prompt:
+Use case: precise-object-edit. Turn the attached approved schnapshot orange logo into a production macOS app icon. Preserve the coral-orange rounded image frame, orange sun and mountains, golden folded corner and three gold flash rays exactly in character and proportions. Remove the entire wordmark. Centre the icon-only symbol inside a clean white rounded-square macOS icon tile; tile occupies 88% of the square canvas with transparent outside corners and margin. Symbol fills about 72% of tile, balanced padding, flat crisp edges, no text, no extra elements, no perspective or drop shadow. Genuine transparent outer background. This is the selected brand asset, not a redesign.
+
+Final cleanup prompt:
+Edit target: attached app icon. Fix ONLY the outer white tile silhouette and alpha channel: a perfectly smooth mathematically clean rounded square, with fully transparent pixels outside it. Remove every stray white fleck, noise, ragged edge, fringe and disconnected white pixel around the outside. Preserve the orange and gold logo inside exactly, same position, white tile and colours. Icon tile inset evenly on the square canvas. Production macOS icon, immaculate antialiased perimeter. No text.
+
+Final alpha extraction prompt:
+Use case: background-extraction. Remove ONLY the black area outside the white rounded-square app icon. Make all of that exterior background genuinely transparent with an alpha channel, NOT painted black, NOT a checkerboard. Preserve the smooth white rounded square and the entire orange/gold logo exactly unchanged. No new shapes or text. Return a transparent PNG cutout ready for a macOS Dock icon.
+
+Final asset: Resources/Brand/app-icon.png
+Packaged macOS icon: Resources/AppIcon.icns
+Rebuild packaging with make icon.

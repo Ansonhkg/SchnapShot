@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "title": "SchnapShot — Zero To Shipped",
+  "output": "video/SchnapShot-zero-to-shipped-10s.mp4",
+  "render": ["{python}", "render.py"],
+  "jobs": [
+    {
+      "id": "01-website",
+      "kind": "video",
+      "endpoint": "minimax/h3-max-turbo/image-to-video",
+      "folder": "video/shots/01-website",
+      "output": "video/shots/01-website/video.mp4",
+      "prompt_file": "prompts/01-website.txt",
+      "files": {"image_url": "assets/website-frame.png", "end_image_url": "assets/website-frame.png"},
+      "input": {"duration": 5, "resolution": "768P", "prompt_expansion_mode": "balanced", "enable_safety_checker": true},
+      "pricing": {"usd": 0.05, "valid_until": "2026-09-06", "source": "https://fal.ai/models/minimax/h3-max-turbo/image-to-video"}
+    },
+    {
+      "id": "02-result",
+      "kind": "video",
+      "endpoint": "minimax/h3-max-turbo/image-to-video",
+      "folder": "video/shots/02-result",
+      "output": "video/shots/02-result/video.mp4",
+      "prompt_file": "prompts/02-result.txt",
+      "files": {"image_url": "assets/result-frame.png", "end_image_url": "assets/result-frame.png"},
+      "input": {"duration": 5, "resolution": "768P", "prompt_expansion_mode": "balanced", "enable_safety_checker": true},
+      "pricing": {"usd": 0.05, "valid_until": "2026-09-06", "source": "https://fal.ai/models/minimax/h3-max-turbo/image-to-video"}
+    }
+  ]
+}

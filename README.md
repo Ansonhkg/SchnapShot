@@ -2,6 +2,8 @@
 
 A native macOS screenshot-to-image app. Select a screen area, let Codex generate a thumbnail, icon, or image using a saved prompt, then paste it. Built with SwiftUI, AppKit, and the installed Codex app-server; no API key or web server required.
 
+[Website and 10-second demo](https://schnapshot.com) · [MIT license](LICENSE)
+
 ## What it does
 
 - **⌥⌘4** selects an area using macOS capture by default. Customize it in **SchnapShot → Settings…**, **File → Capture shortcut…**, or the editor gear button. Apple’s ⌘⇧4 and ⌘⇧5 remain unchanged by default.
@@ -15,8 +17,12 @@ A native macOS screenshot-to-image app. Select a screen area, let Codex generate
 Requires macOS 14+, Swift 6 command-line tools, and an installed Codex CLI or Codex desktop app. The local integration was checked with Codex CLI 0.147.0.
 
 ```sh
+git clone https://github.com/Ansonhkg/SchnapShot.git
+cd SchnapShot
 make run
 ```
+
+Without an Apple Development certificate, use `make run SIGNING_IDENTITY=-` for a local ad-hoc build. macOS may require granting Screen Recording again after an ad-hoc rebuild. A packaged, notarized download is not available yet.
 
 1. Click **Connect Codex** and finish the browser sign-in. Device-code login is also available.
 2. Click **New capture**, then allow SchnapShot under **System Settings → Privacy & Security → Screen & System Audio Recording**. Quit and reopen when macOS asks. If a stale entry is enabled but capture still fails, remove that entry and add this current app bundle again.
@@ -83,3 +89,15 @@ CMDSHIFT4_LIVE_CHECK=1 swift test  # Also test the installed app-server handshak
 - [Codex image generation](https://learn.chatgpt.com/docs/image-generation)
 
 Ailised’s device-code sign-in implementation was inspected as a reference. SchnapShot uses Codex’s managed protocol instead of copying its OAuth token-exchange implementation. No Ailised files were changed.
+
+## Website and promo source
+
+- `landing/`: the React/Vinext landing page; see its [local setup](landing/README.md).
+- `promo/filmflow/interactive-flow/`: the approved 1080p screenshot-animation renderer and reference assets.
+- `promo/storyboards/`: the interaction script.
+
+Production hosting identifiers, local credentials, generated job logs, and temporary renders are excluded from the public repository. The finished promo used by the website is included in `landing/public/`.
+
+## License
+
+SchnapShot code is available under the [MIT license](LICENSE). See [third-party asset notes](THIRD_PARTY_ASSETS.md) for demo screenshots, trademarks, and dependencies.

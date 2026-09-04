@@ -10,3 +10,10 @@ dist/
 *.p12
 *.pfx
 *.key
+promo/assets/private/
+promo/output/
+promo/**/video/
+__pycache__/
+# Local hosting identity is kept in the Sites checkout, not the public repository.
+landing/.openai/
+landing/.git/

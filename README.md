@@ -100,4 +100,4 @@ Production hosting identifiers, local credentials, generated job logs, and tempo
 
 ## License
 
-SchnapShot code is available under the [MIT license](LICENSE). See [third-party asset notes](THIRD_PARTY_ASSETS.md) for demo screenshots, trademarks, and dependencies.
+SchnapShot code is available under the [MIT license](LICENSE). Third-party screenshots, trademarks, and dependencies retain their respective owners’ rights and licenses.

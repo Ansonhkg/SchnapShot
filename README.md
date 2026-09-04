@@ -33,7 +33,7 @@ You can use **File → Open image…** to generate from an existing image withou
 
 The local app bundle is `dist/SchnapShot.app`. Builds use an installed Apple Development signing identity so the app has a stable identity across rebuilds. Override with `SIGNING_IDENTITY` if needed. This is not notarized or packaged for distribution. Keep it at a stable path for macOS permissions. `make run` does not replace an already running process; quit the app before rebuilding and reopening it.
 
-The executable, source target, bundle identifier (`com.anson.SchnapShot`), and application-support folder now use SchnapShot. Upgrade code imports the old app's presets and shortcut once, moves its stored captures, and keeps a legacy home-path alias only to preserve Codex Keychain login. Historical logo concepts retain their original wordmarks. Renaming the bundle identity requires granting Screen Recording to the new app once.
+The executable, source target, bundle identifier (`com.anson.SchnapShot`), and application-support folder now use SchnapShot. Upgrade code imports the old app's presets and shortcut once, moves its stored captures, and keeps a legacy home-path alias only to preserve Codex Keychain login. Renaming the bundle identity requires granting Screen Recording to the new app once.
 
 ## How it works
 
@@ -90,13 +90,11 @@ CMDSHIFT4_LIVE_CHECK=1 swift test  # Also test the installed app-server handshak
 
 Ailised’s device-code sign-in implementation was inspected as a reference. SchnapShot uses Codex’s managed protocol instead of copying its OAuth token-exchange implementation. No Ailised files were changed.
 
-## Website and promo source
+## Website source
 
-- `landing/`: the React/Vinext landing page; see its [local setup](landing/README.md).
-- `promo/filmflow/interactive-flow/`: the approved 1080p screenshot-animation renderer and reference assets.
-- `promo/storyboards/`: the interaction script.
+The React/Vinext landing page is in `landing/`; see its [local setup](landing/README.md). The finished demo and images used by the website are included in `landing/public/`.
 
-Production hosting identifiers, local credentials, generated job logs, and temporary renders are excluded from the public repository. The finished promo used by the website is included in `landing/public/`.
+Promo production files, alternate logo concepts, temporary renders, local credentials, and production hosting settings are excluded from the public source.
 
 ## License
 

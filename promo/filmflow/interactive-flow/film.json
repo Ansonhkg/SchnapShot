@@ -1,7 +1,0 @@
-{
-  "version": 1,
-  "title": "SchnapShot — capture, copy, replace",
-  "output": "video/SchnapShot-interactive-1080p.mp4",
-  "render": ["{python}", "render.py"],
-  "jobs": []
-}

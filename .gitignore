@@ -17,3 +17,14 @@ __pycache__/
 # Local hosting identity is kept in the Sites checkout, not the public repository.
 landing/.openai/
 landing/.git/
+
+# Local production material is not part of the public source.
+/promo/
+/Resources/Brand/Concepts/
+/Resources/Brand/app-icon-prompt.txt
+/landing/public/SchnapShot-promo-10s.mp4
+# Unused starter components remain available in the local Sites checkout.
+/landing/components/ui/*
+!/landing/components/ui/button.tsx
+!/landing/components/ui/dialog.tsx
+/landing/hooks/use-mobile.ts
